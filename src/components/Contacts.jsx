@@ -2,14 +2,16 @@ import React from 'react'
 
 const Contacts = (props) => {
   return (
-    <div>
-      <h2>Contacts</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, eligendi. Placeat aperiam dignissimos voluptatibus sapiente alias recusandae doloremque nulla voluptates debitis obcaecati qui quos, sit amet, iusto numquam maiores unde.</p>
-      <p>Vero sequi minima alias, consequuntur nam aliquid pariatur! Assumenda quos voluptatibus at tempore quibusdam, asperiores reiciendis architecto reprehenderit eum nam, eos molestiae fuga perspiciatis consequuntur mollitia nesciunt maiores, blanditiis doloribus?</p>
-      <p>Quae, voluptatem. Vero voluptates sunt accusamus optio at praesentium reprehenderit ratione dignissimos. Quia ut eum labore qui facere repellendus quasi culpa voluptatum. Unde nam necessitatibus officia cupiditate odio ea accusantium.</p>
-      <p>Praesentium architecto magni nobis itaque et cupiditate, incidunt mollitia qui sapiente! Dolor ratione saepe ex, suscipit aut cumque accusantium, expedita dicta reprehenderit sed voluptates numquam labore repellat quaerat, cupiditate optio!</p>
-      <p>Repellendus adipisci incidunt rem sint, nesciunt officiis et? Facilis ratione eum fugiat quod id provident iure ad? Vero delectus et sed in sequi. Et sunt vero itaque, optio iure repudiandae?</p>
-    </div>
+    <section className="container">
+      <div className="row justify-content-center mt-3">
+        <div className='col-8 card p-3 bg-light'>
+          <h2>Contacts</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, nihil debitis saepe earum, fuga id impedit aspernatur officiis perferendis et excepturi nam, dolorum maxime explicabo nulla perspiciatis sit adipisci vitae!</p>
+          <p>Facere possimus nihil, quidem, fuga quisquam praesentium voluptas minus in, eos magnam cum sapiente enim tempora quaerat autem blanditiis consectetur nisi. Quos dolores hic debitis recusandae officia ad sapiente facilis!</p>
+          <p>Nemo praesentium voluptas error perspiciatis alias quam cupiditate eius vitae illo labore sit cumque id delectus similique molestiae magnam eaque deleniti, dolor odit, fugit vero qui. Rem distinctio minima fuga?</p>
+        </div>
+      </div>
+    </section>
   )
 }
 

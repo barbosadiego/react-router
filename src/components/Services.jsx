@@ -2,12 +2,18 @@ import React from 'react'
 
 const Services = (props) => {
   return (
-    <div>
-      <h2>Services</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis suscipit corporis nulla, repudiandae tenetur vitae quo nostrum facere sint commodi omnis quia debitis harum quod blanditiis laborum incidunt dignissimos sed?</p>
-      <p>Pariatur laudantium debitis nulla veritatis esse excepturi voluptatum quidem a, magnam adipisci optio recusandae cupiditate. Quasi, eum cum mollitia nemo veniam illo praesentium esse molestias quidem dolores aliquid nesciunt magni?</p>
-      <p>Nam voluptatibus inventore modi nostrum sapiente nulla consequuntur commodi accusamus fugit, eligendi ex animi id quaerat ut dignissimos ea libero saepe! Quis voluptas tenetur eveniet qui quidem animi, unde quod.</p>
-    </div>
+    <section className="container">
+      <div className="row justify-content-center mt-3">
+        <div className='col-8 card p-3 bg-light'>
+          <h2>Services</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, nihil debitis saepe earum, fuga id impedit aspernatur officiis perferendis et excepturi nam, dolorum maxime explicabo nulla perspiciatis sit adipisci vitae!</p>
+          <p>Facere possimus nihil, quidem, fuga quisquam praesentium voluptas minus in, eos magnam cum sapiente enim tempora quaerat autem blanditiis consectetur nisi. Quos dolores hic debitis recusandae officia ad sapiente facilis!</p>
+          <p>Nemo praesentium voluptas error perspiciatis alias quam cupiditate eius vitae illo labore sit cumque id delectus similique molestiae magnam eaque deleniti, dolor odit, fugit vero qui. Rem distinctio minima fuga?</p>
+          <p>In aspernatur delectus necessitatibus. Enim modi tenetur beatae recusandae impedit dolorem suscipit quisquam in. Architecto eos, quos natus tempore odit blanditiis molestiae. Dicta dolorem ipsa maiores, hic blanditiis in molestias.</p>
+          <p>Ad sapiente soluta ipsam vitae aspernatur provident aut totam id non impedit, quisquam eius molestiae, cumque accusantium reprehenderit inventore deserunt suscipit excepturi enim! Unde dolore inventore atque ex pariatur molestiae.</p>
+        </div>
+      </div>
+    </section>
   )
 }
 

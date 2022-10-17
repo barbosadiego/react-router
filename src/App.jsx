@@ -1,25 +1,32 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Contacts from './components/Contacts';
 import Home from './components/Home';
 import Services from './components/Services';
+import Erro from './components/Erro';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <h1>React Router</h1>
-      <nav>
-        <Link to='/'>Home</Link> | {' '}
-        <Link to='/services'>Services</Link> | {' '}
-        <Link to='/contacts'>Contacts</Link>
+    <>
+      <h1 className='text-center my-3'>React Router</h1>
+      <nav className='container'>
+        <div className="row">
+          <div className="col text-center">
+            <Link className='btn btn-primary me-3' to='/'>Home</Link>
+            <Link className='btn btn-primary me-3' to='/services'>Services</Link>
+            <Link className='btn btn-primary me-3' to='/contacts'>Contacts</Link>
+          </div>
+        </div>
       </nav>
       <Routes>
         <Route path='/' element={ <Home />}/>
         <Route path='/services' element={ <Services />}/>
         <Route path='/contacts' element={ <Contacts />}/>
+        <Route path='*' element={ <Erro />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 };
 
