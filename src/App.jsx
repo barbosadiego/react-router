@@ -1,49 +1,32 @@
 import React from 'react';
-import { Routes, Route, Link, Outlet } from 'react-router-dom';
 
-// Bootstrap
+//react router
+import { Route, Routes } from 'react-router-dom';
+
+//bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+//components
+import Header from './Header';
+import Empresa from './Empresa';
+import Lojas from './Lojas';
+import LisboaLoja from './LisboaLoja';
+import PortoLoja from './PortoLoja';
+import CoimbraLoja from './CoimbraLoja';
 
 const App = () => {
   return (
     <>
-      <h1>React Router!</h1>
-      <nav>
-        <span>
-          <Link to="/">HOME</Link>
-        </span>{' '}
-        <span>
-          <Link to="/about">ABOUT</Link>
-        </span>{' '}
-        <span>
-          <Link to="/contact">CONTACT</Link>
-        </span>
-      </nav>
+      <Header />
       <hr />
-
       <Routes>
-        <Route path="/" element={<h2>home</h2>} />
-        <Route path="/about" element={<h2>about</h2>} />
-        <Route
-          path="/contact"
-          element={
-            <>
-              <h2>contact</h2>
-              <nav>
-                <Link to="local">local</Link>{' '}
-                <Link to="worktime">worktime</Link>{' '}
-                <Link to="phone">phone</Link> <Link to="email">email</Link>
-              </nav>
-              <Outlet />
-            </>
-          }
-        >
-          <Route path="local" element={<h3>local</h3>} />
-          <Route path="worktime" element={<h3>worktime</h3>} />
-          <Route path="phone" element={<h3>phone</h3>} />
-          <Route path="email" element={<h3>email</h3>} />
+        <Route path='/' element={ <Empresa />}/>
+        <Route path='/lojas/*' element={ <Lojas /> }>
+          <Route path='lisboa' element={ <LisboaLoja />} />
+          <Route path='porto' element={ <PortoLoja />} />
+          <Route path='lisboa' element={ <LisboaLoja />} />
+          <Route path='coimbra' element={ <CoimbraLoja />} />
         </Route>
-        <Route path="*" element={<h2>page not found</h2>} />
       </Routes>
     </>
   );

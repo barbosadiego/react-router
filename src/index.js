@@ -2,9 +2,8 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
-const root = document.querySelector('#root');
-ReactDOM.createRoot(root).render(
+ReactDOM.createRoot(document.querySelector('#root')).render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>,
+  </BrowserRouter>
 );
