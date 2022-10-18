@@ -6,6 +6,9 @@ import { Route, Routes } from 'react-router-dom';
 //bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+//css custom
+import './App.css';
+
 //components
 import Header from './Header';
 import Empresa from './Empresa';
@@ -19,15 +22,16 @@ const App = () => {
     <>
       <Header />
       <hr />
-      <Routes>
-        <Route path='/' element={ <Empresa />}/>
-        <Route path='/lojas/*' element={ <Lojas /> }>
-          <Route path='lisboa' element={ <LisboaLoja />} />
-          <Route path='porto' element={ <PortoLoja />} />
-          <Route path='lisboa' element={ <LisboaLoja />} />
-          <Route path='coimbra' element={ <CoimbraLoja />} />
-        </Route>
-      </Routes>
+      <main>
+        <Routes>
+          <Route path='/' element={ <Empresa />}/>
+          <Route path='/lojas/*' element={ <Lojas /> }>
+            <Route path='lisboa' element={ <LisboaLoja />} />
+            <Route path='porto' element={ <PortoLoja />} />
+            <Route path='coimbra' element={ <CoimbraLoja />} />
+          </Route>
+        </Routes>
+      </main>
     </>
   );
 };
