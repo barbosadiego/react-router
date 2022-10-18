@@ -1,7 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { useState } from 'react';
 
-const About = (props) => {
+const About = () => {
+
+  let {id} = useParams();
+
+  const [nomes] = useState(['João', 'Ana', 'Carlos']);
+
   return (
     <section className="container">
       <div className="row justify-content-center mt-3">
@@ -13,9 +19,13 @@ const About = (props) => {
             perferendis et excepturi nam, dolorum maxime explicabo nulla
             perspiciatis sit adipisci vitae!
           </p>
+          <h3>Cliente:</h3>
+          {nomes[id]}
         </div>
         <div className="col-12 text-center mt-3">
-          <Link className='btn btn-primary' to='/'>Home</Link>
+          <Link className="btn btn-primary" to="/">
+            Home
+          </Link>
         </div>
       </div>
     </section>
