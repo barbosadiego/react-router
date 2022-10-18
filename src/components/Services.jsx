@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 
-const Services = (props) => {
+const Services = () => {
   return (
     <section className="container">
       <div className="row justify-content-center mt-3">
@@ -13,18 +13,25 @@ const Services = (props) => {
             magnam eaque deleniti, dolor odit, fugit vero qui. Rem distinctio
             minima fuga?
           </p>
-          <p>
-            In aspernatur delectus necessitatibus. Enim modi tenetur beatae
-            recusandae impedit dolorem suscipit quisquam in. Architecto eos,
-            quos natus tempore odit blanditiis molestiae. Dicta dolorem ipsa
-            maiores, hic blanditiis in molestias.
-          </p>
-          <p>
-            Ad sapiente soluta ipsam vitae aspernatur provident aut totam id non
-            impedit, quisquam eius molestiae, cumque accusantium reprehenderit
-            inventore deserunt suscipit excepturi enim! Unde dolore inventore
-            atque ex pariatur molestiae.
-          </p>
+
+          <ul>
+            <li>
+              <Link to='service1'>Service1</Link>
+            </li>
+            <li>
+              <Link to='service2'>Service2</Link>
+            </li>
+            <li>
+              <Link to='service3'>Service3</Link>
+            </li>
+          </ul>
+          
+          <Routes>
+            <Route path='service1' element={ <h3>Serviço 1</h3> }/>
+            <Route path='service2' element={ <h3>Serviço 2</h3> }/>
+            <Route path='service3' element={ <h3>Serviço 3</h3> }/>
+          </Routes>
+
           <Link className='btn btn-primary' to='/about'>About</Link>
         </div>
       </div>
